@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".78"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/vUserAvatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@mipmap/ic_launcher_round"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/vContentLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_message_left"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@+id/vUserAvatar"
+        app:layout_constraintEnd_toEndOf="@id/vRightGuideline">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/vUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/dove_gray"
+            android:textStyle="bold"
+            tools:text="John Doe"/>
+
+        <android.support.text.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/vContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/tundora"
+            tools:text="Lorem ipsum dolor sit amet \uD83D\uDE10"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/vAttachments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vRightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/vContentLayout"/>
+
+</android.support.constraint.ConstraintLayout>

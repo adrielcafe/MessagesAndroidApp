@@ -1,0 +1,30 @@
+buildscript {
+    ext.support_version = '27.0.2'
+    ext.kotlin_version = '1.2.21'
+    ext.moxy_version = '1.5.3'
+    ext.moshi_version = '1.5.0'
+    ext.fastadapter_version = '3.2.2'
+    ext.glide_version = '4.5.0'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0-beta1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.realm:realm-gradle-plugin:4.3.3"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

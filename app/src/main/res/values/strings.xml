@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Messages</string>
+
+    <string name="me">Me</string>
+    <string name="delete_message">Delete message</string>
+    <string name="delete_attachment">Delete attachment</string>
+
+    <string-array name="message_dialog_options">
+        <item>@string/delete_message</item>
+    </string-array>
+    <string-array name="attachment_dialog_options">
+        <item>@string/delete_attachment</item>
+    </string-array>
+</resources>

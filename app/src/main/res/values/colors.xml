@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f82ef</color>
+    <color name="colorPrimaryDark">#2b6dd9</color>
+    <color name="colorAccent">#ff4081</color>
+
+    // Color names from http://chir.ag/projects/name-that-color
+    <color name="alabaster">#fafafa</color>
+    <color name="wild_sand">#f9f9f9</color>
+    <color name="gallery">#eaeaea</color>
+    <color name="silver_chalice">#9d9d9d</color>
+    <color name="dove_gray">#6d6d6d</color>
+    <color name="tundora">#4d4d4d</color>
+</resources>
